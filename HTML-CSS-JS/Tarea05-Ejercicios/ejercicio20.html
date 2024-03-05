@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const totalElementos = 5;
+const numerosPares = [];
+
+while (numerosPares.length < totalElementos) {
+  const numero = parseInt(prompt(`Ingrese un número: `));
+
+  if (!isNaN(numero) && numero % 2 === 0) {
+    numerosPares.push(numero);
+  } else {
+    console.log("El número no es válido o no es par. Inténtelo nuevamente.");
+  }
+}
+
+console.log(`Los números pares ingresados son: ${numerosPares.join(', ')}`);
+
+    </script>
+</body>
+</html>

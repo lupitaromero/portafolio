@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const precioLibro = parseFloat(prompt("Ingrese el precio de un libro:"));
+        const cantidadLibros = parseInt(prompt("Ingrese la cantidad de libros:"));
+
+if (!isNaN(precioLibro) && !isNaN(cantidadLibros) && precioLibro > 0 && cantidadLibros > 0) {
+  let totalAPagar = precioLibro * cantidadLibros;
+
+  if (cantidadLibros >= 3 && cantidadLibros < 10) {
+    totalAPagar *= 0.97; // Aplicar 3% de descuento
+  } else if (cantidadLibros >= 10) {
+    totalAPagar *= 0.9;  // Aplicar 10% de descuento
+  }
+
+  console.log(`El total a pagar es: $${totalAPagar.toFixed(2)}`);
+} else {
+  console.log("Por favor, ingrese valores válidos para el precio y la cantidad de libros.");
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularporEstacionamiento(Pagoporhoras) {
+  const costodeparqueo = 1.00; // $1 hora de parqueo
+  let parqueoTotal = 0;
+
+  for (let parqueo of parqueo) {
+    horadeparqueo += Pagoporhoras * costodeparqueo;
+  }
+
+  return parqueoTotal;
+}
+
+const horadeparqueo = parseFloat(prompt("Ingresa la cantidad:"));
+
+
+console.log(`El usuario pagará: $${horadeparqueo.toFixed(2)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularPromedio(notas) {
+  const totalNotas = notas.length;
+  const sumaNotas = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+  const promedio = sumaNotas / totalNotas;
+  return promedio;
+}
+
+const totalEstudiantes = 10;
+const notasEstudiantes = [];
+
+for (let i = 1; i <= totalEstudiantes; i++) {
+  const nota = parseFloat(prompt(`Ingrese la nota del estudiante ${i}:`));
+  if (!isNaN(nota)) {
+    notasEstudiantes.push(nota);
+  } else {
+    console.log(`La nota ingresada para el estudiante ${i} no es válida. Se omitirá.`);
+  }
+}
+
+if (notasEstudiantes.length > 0) {
+  const promedioGrupo = calcularPromedio(notasEstudiantes);
+  console.log(`El promedio del grupo es: ${promedioGrupo.toFixed(2)}`);
+} else {
+  console.log("No se ingresaron notas válidas para calcular el promedio.");
+}
+    </script>
+</body>
+</html>

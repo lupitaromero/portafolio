@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularHipotenusa(cateto1, cateto2) {
+  if (cateto1 <= 0 || cateto2 <= 0) {
+    return "Los catetos deben ser valores positivos";
+  }
+
+  const hipotenusa = Math.sqrt(cateto1 * cateto1 + cateto2 * cateto2);
+  return hipotenusa;
+}
+
+const catetoA = 3; // Reemplaza con el valor del primer cateto
+const catetoB = 4; // Reemplaza con el valor del segundo cateto
+
+const hipotenusa = calcularHipotenusa(catetoA, catetoB);
+console.log(`La hipotenusa es: ${hipotenusa}`);
+    </script>
+</body>
+</html>

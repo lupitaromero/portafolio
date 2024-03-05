@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const totalNumeros = 10;
+const numeros = [];
+
+for (let i = 1; i <= totalNumeros; i++) {
+  const numero = parseFloat(prompt(`Ingrese el número ${i}:`));
+
+  if (!isNaN(numero)) {
+    numeros.push(numero);
+  } else {
+    console.log(`El valor ingresado para el número ${i} no es válido. Se omitirá.`);
+  }
+}
+
+const suma = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+console.log(`Los números ingresados son: ${numeros.join(', ')}`);
+console.log(`La suma de los números es: ${suma}`);
+
+    </script>
+</body>
+</html>

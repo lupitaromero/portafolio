@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const montoCompra = parseFloat(prompt("Ingrese el monto de compra:"));
+
+if (!isNaN(montoCompra) && montoCompra >= 0) {
+  let descuento = 0;
+
+  if (montoCompra > 0 && montoCompra <= 500) {
+    descuento = 0;
+  } else if (montoCompra > 500 && montoCompra <= 1000) {
+    descuento = 0.05; // 5%
+  } else if (montoCompra > 1000 && montoCompra <= 7000) {
+    descuento = 0.11; // 11%
+  } else if (montoCompra > 7000 && montoCompra <= 15000) {
+    descuento = 0.18; // 18%
+  } else {
+    descuento = 0.25; // 25%
+  }
+
+  const montoConDescuento = montoCompra * (1 - descuento);
+  console.log(`El monto de compra es: $${montoCompra.toFixed(2)}`);
+  console.log(`El descuento aplicado es: ${descuento * 100}%`);
+  console.log(`El monto a pagar con descuento es: $${montoConDescuento.toFixed(2)}`);
+} else {
+  console.log("Por favor, ingrese un monto de compra válido.");
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const horasTrabajadas = parseFloat(prompt("Ingrese el número de horas trabajadas:"));
+const valorPorHora = parseFloat(prompt("Ingrese el valor por hora:"));
+
+if (!isNaN(horasTrabajadas) && !isNaN(valorPorHora) && horasTrabajadas >= 0 && valorPorHora >= 0) {
+  let salarioBruto = horasTrabajadas * valorPorHora;
+  let porcentajeDescuento;
+
+  if (horasTrabajadas >= 40) {
+    porcentajeDescuento = 0.0945; // 9.45%
+  } else {
+    porcentajeDescuento = 0.15; // 15%
+  }
+
+  const descuento = salarioBruto * porcentajeDescuento;
+  const salarioNeto = salarioBruto - descuento;
+
+  console.log(`Salario bruto: $${salarioBruto.toFixed(2)}`);
+  console.log(`Descuento de seguridad social: $${descuento.toFixed(2)}`);
+  console.log(`Salario neto a recibir: $${salarioNeto.toFixed(2)}`);
+} else {
+  console.log("Por favor, ingrese valores válidos para las horas trabajadas y el valor por hora.");
+}
+
+
+    </script>
+</body>
+</html>

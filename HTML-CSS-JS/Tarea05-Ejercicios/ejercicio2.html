@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularAreaTrapecio(baseMayor, baseMenor, altura) {
+  if (baseMayor <= 0 || baseMenor <= 0 || altura <= 0) {
+    return "Las dimensiones deben ser valores positivos";
+  }
+
+  const area = ((baseMayor + baseMenor) * altura) / 2;
+  return area;
+}
+
+const baseMayor = 10;   // Reemplaza con el valor de la base mayor
+const baseMenor = 6;    // Reemplaza con el valor de la base menor
+const altura = 8;       // Reemplaza con el valor de la altura
+
+const areaTrapecio = calcularAreaTrapecio(baseMayor, baseMenor, altura);
+console.log(`El área del trapecio es: ${areaTrapecio}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.container {
+    background-color: rgb(188, 222, 222);
+    width: 450px;
+    align-content: center;
+    text-align: start;
+    border: 2px dotted black;
+    
+  }
+
+.col-12{
+  align-content: center;
+  text-align: center;
+}
+body{
+  background-color: rgb(192, 193, 210);
+}
+
+footer{
+  align-content: center;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+}
+
+
+  

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const edad = parseInt(prompt("Ingrese su edad:"));
+
+if (!isNaN(edad) && edad >= 0 && edad <= 110) {
+  let categoria;
+
+  if (edad <= 12) {
+    categoria = "Niño";
+  } else if (edad > 12 && edad < 18) {
+    categoria = "Adolescente";
+  } else if (edad >= 18 && edad < 60) {
+    categoria = "Adulto";
+  } else {
+    categoria = "Tercera edad";
+  }
+
+  console.log(`Usted es ${categoria}.`);
+} else {
+  console.log("Por favor, ingrese una edad válida entre 0 y 110.");
+}
+
+    </script>
+</body>
+</html>

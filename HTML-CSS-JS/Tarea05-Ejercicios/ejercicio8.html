@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numero1 = parseInt(prompt("Ingrese el primer número:"));
+        const numero2 = parseInt(prompt("Ingrese el segundo número:"));
+        const numero3 = parseInt(prompt("Ingrese el tercer número:"));
+
+if (!isNaN(numero1) && !isNaN(numero2) && !isNaN(numero3)) {
+  let mayor = numero1;
+
+  if (numero2 > mayor) {
+    mayor = numero2;
+  }
+
+  if (numero3 > mayor) {
+    mayor = numero3;
+  }
+
+  console.log(`El mayor número es: ${mayor}`);
+} else {
+  console.log("Por favor, ingrese números enteros válidos.");
+}
+
+    </script>
+</body>
+</html>

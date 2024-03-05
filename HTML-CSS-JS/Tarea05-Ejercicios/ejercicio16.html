@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const totalNotas = 10;
+        let sumaNotas = 0;
+
+for (let i = 1; i <= totalNotas; i++) {
+  const nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
+  
+  if (!isNaN(nota)) {
+    sumaNotas += nota;
+  } else {
+    console.log(`La nota ingresada para la nota ${i} no es válida. Se omitirá.`);
+  }
+}
+
+const promedio = sumaNotas / totalNotas;
+console.log(`El promedio de las ${totalNotas} notas es: ${promedio.toFixed(2)}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   const angulo = parseFloat(prompt("Ingrese el valor del ángulo en grados:"));
+
+if (!isNaN(angulo) && angulo >= 0 && angulo <= 180) {
+  let tipoAngulo;
+
+  if (angulo < 90) {
+    tipoAngulo = "Ángulo agudo";
+  } else if (angulo === 90) {
+    tipoAngulo = "Ángulo recto";
+  } else if (angulo > 90 && angulo < 180) {
+    tipoAngulo = "Ángulo obtuso";
+  } else {
+    tipoAngulo = "Ángulo llano";
+  }
+
+  console.log(`El ángulo de ${angulo} grados es un ${tipoAngulo}.`);
+} else {
+  console.log("Por favor, ingrese un valor de ángulo válido entre 0 y 180 grados.");
+}
+
+
+    </script>
+</body>
+</html>

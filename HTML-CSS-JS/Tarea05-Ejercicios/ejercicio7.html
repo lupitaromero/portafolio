@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const numero1 = parseFloat(prompt("Ingrese el primer número:"));
+    const numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+    const numero3 = parseFloat(prompt("Ingrese el tercer número:"));
+    const numero4 = parseFloat(prompt("Ingrese el cuarto número:"));
+
+if (!isNaN(numero1) && !isNaN(numero2) && !isNaN(numero3) && !isNaN(numero4)) {
+  const multiplicacion = numero1 * numero2 * numero3 * numero4;
+  console.log(`El resultado de la multiplicación es: ${multiplicacion}`);
+} else {
+  console.log("Por favor, ingrese números válidos para realizar la multiplicación.");
+}
+    </script>
+</body>
+</html>

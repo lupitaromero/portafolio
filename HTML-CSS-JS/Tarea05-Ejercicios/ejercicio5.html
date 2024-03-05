@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function convertirMBaGB(megabytes) {
+  const factorConversion = 1024; // 1 GB = 1024 MB
+  const gigabytes = megabytes / factorConversion;
+  return gigabytes;
+}
+
+const megabytesIngresados = parseFloat(prompt("Ingresa la cantidad en Megabytes:"));
+
+if (!isNaN(megabytesIngresados)) {
+  const gigabytesConvertidos = convertirMBaGB(megabytesIngresados);
+  console.log(`${megabytesIngresados} Megabytes son equivalentes a ${gigabytesConvertidos.toFixed(2)} Gigabytes.`);
+} else {
+  console.log("Por favor, ingresa una cantidad válida.");
+}
+    </script>
+</body>
+</html>

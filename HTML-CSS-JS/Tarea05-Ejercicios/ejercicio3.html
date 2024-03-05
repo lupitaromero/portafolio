@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularComisiones(ventas) {
+  const porcentajeComision = 0.1; // 10% de comisión
+  let comisionTotal = 0;
+
+  for (let venta of ventas) {
+    comisionTotal += venta * porcentajeComision;
+  }
+
+  return comisionTotal;
+}
+
+const sueldoBase = parseFloat(prompt("Ingresa tu sueldo:")); // Reemplaza con el sueldo base del vendedor
+const ventasRealizadas = [50, 100, 200]; // Reemplaza con las ventas realizadas en el mes
+
+const comisiones = calcularComisiones(ventasRealizadas);
+const totalRecibido = sueldoBase + comisiones;
+
+console.log(`El vendedor recibirá: $${comisiones.toFixed(2)} por comisiones.`);
+console.log(`El total de sueldo que recibirá en el mes es: $${totalRecibido.toFixed(2)}.`);
+    </script>
+</body>
+</html>

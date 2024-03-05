@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const totalNumeros = 20;
+const numeros = [];
+
+for (let i = 1; i <= totalNumeros; i++) {
+  const numero = parseInt(prompt(`Ingrese el número ${i}:`));
+
+  if (!isNaN(numero)) {
+    numeros.push(numero);
+  } else {
+    console.log(`El valor ingresado para el número ${i} no es válido. Se omitirá.`);
+  }
+}
+
+if (numeros.length > 0) {
+  let suma = 0;
+  let mayor = numeros[0];
+  let menor = numeros[0];
+
+  for (let num of numeros) {
+    suma += num;
+
+    if (num > mayor) {
+      mayor = num;
+    }
+
+    if (num < menor) {
+      menor = num;
+    }
+  }
+
+  const promedio = suma / numeros.length;
+
+  console.log(`Números ingresados: ${numeros.join(', ')}`);
+  console.log(`El mayor número es: ${mayor}`);
+  console.log(`El menor número es: ${menor}`);
+  console.log(`El promedio de los números es: ${promedio.toFixed(2)}`);
+} else {
+  console.log("No se ingresaron números válidos para analizar.");
+}
+
+    </script>
+</body>
+</html>
